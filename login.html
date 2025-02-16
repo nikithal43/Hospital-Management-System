@@ -1,0 +1,84 @@
+<html>
+<head><title>Jeevanraksha Hospital</title>
+</head>
+<style>
+h2{
+margin-left:120px;
+margin-right:90px;
+margin-bottom:10px;
+magin-top:10px;
+}
+body {
+  background-image: url('img1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1{
+padding-bottom:20px;
+padding-top:10px;
+}
+label{
+font-family:Libre Franklin;
+font-size:20px;
+color:white;
+}
+button {
+  width: 20%;
+  background-color:orange;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+form{
+background-color:hsla(212, 100%, 50%, 0.5);
+color:white;
+width:500px;
+margin-bottom:20px;
+position: absolute;
+border-radius: 25px;
+font-size:20px;
+font-family:Libre Franklin;
+margin-top:60px;
+margin-left:400px;
+}
+</style>
+<body style="background-image: url('img1.jpg');">
+
+<h1 style="text-align:left;color:DodgerBlue;font-family:Libre Franklin;text-align:center;">Jeevanraksha Hospitals</h1>
+<div class="container-fluid">
+</div>
+<div style="text-align:center; margin-top:20px;background-color:DodgerBlue;padding-top:5px;padding-bottom:5px;">
+<a style="padding-right: 20px;color:white;" href="index.html">Home</a>
+<a style="padding-right: 20px;color:white;" href="About_us.html">About Us</a>
+<a style="padding-right: 20px;color:white;" href="Specialization.html">Specialization</a>
+<a style="padding-right: 20px;color:white;" href="Login.html">Login</a>
+<a style="padding-right: 20px;color:white;" href="Doctor_login.html">Doctor Login</a>
+<a style="padding-right: 20px;color:white;" href="Account_Dept.html">Account Login</a>
+</div>
+
+
+<div class="card-body">
+<form action="login.php" method="post">
+<div class="form-group">
+<h2 style="text-align:center;color:white;">Login form</h2><br>
+&emsp;<label for="Patient_ID">Patient_ID</label>
+&emsp;<input type="Patient_ID" id="Patient_ID" class="form-control" name="Patient_ID">
+</div><br>
+<div class="form-group">
+&emsp;<label for="Passsword">Password</label>
+&ensp;&emsp;<input type="Password" id="Password class="form-control" name="Password">
+</div><br>
+&emsp;<input type="submit" class="btn btn-primary w-100 value="Login" style="color:white;background-color:orange;padding: 10px 10px;margin: 8px 50px;border: none;
+  border-radius: 4px;"><br>
+<br>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<?php session_start(); ?>
+<html>
+<head><title>Jeevanraksha Hospital</title>
+</head>
+<style>
+input[type=text], select {
+  padding: 15px 20px;
+  margin: 8px 50px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size:25px;
+}
+
+button {
+  width: 20%;
+  background-color:orange;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+form{
+background-color:hsla(212, 100%, 50%, 0.5);
+color:white;
+margin-left:650px;
+width:500px;
+margin-bottom:10px;
+position: absolute;
+top: 175px;
+border-radius: 25px;
+font-size:20px;
+font-family:Libre Franklin;
+}
+h2{
+margin-left:120px;
+margin-right:90px;
+margin-bottom:10px;
+magin-top:10px;
+font-size:25px;
+}
+body {
+  background-image: url('img1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1{
+padding-bottom:20px;
+padding-top:10px;
+font-size:40px;
+}
+input[type=text]{
+height:30px
+}
+
+</style>
+<body style="background-image: url('img1.jpg');">
+
+<h1 style="text-align:left;color:DodgerBlue;font-family:Libre Franklin;text-align:center;">Jeevanraksha Hospitals</h1>
+<div class="container-fluid">
+</div>
+<div style="text-align:center; margin-top:20px;background-color:DodgerBlue;font-family:Libre Franklin;padding-top:5px;padding-bottom:5px;">
+<a style="padding-right: 20px;color:white;" href="index.html">Home</a>
+<a style="padding-right: 20px;color:white;" href="About_us.html">About Us</a>
+<a style="padding-right: 20px;color:white;" href="Specialization.html">Specialization</a>
+<a style="padding-right: 20px;color:white;" href="Login.html">Login</a>
+<a style="padding-right: 20px;color:white;" href="Doctor_login.html">Doctor Login</a>
+<a style="padding-right: 20px;color:white;" href="Account_Dept.html">Account Login</a>
+<a style="padding-right: 20px;color:white;" href="registerform.html">Sign in</a>
+</div>
+<h1 style="text-align:left; color:DodgerBlue;font-family:Libre Franklin;font-size:80px;">Healthy Isn't <br> a GOAL. ITS <br> a Way of Living.</h1>
+
+<form action="appointment.php" method="POST" >
+  <h2 style="text-align:center;"> Book Your Appointment</h2><br><br>
+  <div class="form-group">
+   &emsp;<label for="Patient_ID">Patient_ID</label>
+   &emsp;&ensp;&emsp;<input type="Patient_ID" id="Patient_ID" class="form-control" name="Patient_ID" style="height:30px;width:250px;border-radius:6px;">
+   </div><br>
+ <div class="form-group">
+   &emsp;<label for="Patient_Name">Patient_Name</label>
+   &emsp;<input type="Patient_Name" id="Patient_Name" class="form-control" name="Patient_Name" style="height:30px;width:250px;border-radius:6px;">
+   </div><br>
+  <div class="form-group mb=3">
+   &emsp;<label for="">Date & Time</label>
+   &emsp;&ensp;<input type="datetime-local" name="Appointment_DT" class="form-control" style="height:30px;width:250px;border-radius:6px;">
+   </div><br>
+   <div class="form-group mb=3">
+   &emsp;<label for="Doctor_ID">Doctor_ID</label>
+   &emsp;&emsp;&ensp;<input type="Doctor_ID" id="Doctor_ID" class="form-control" name="Doctor_ID" style="height:30px;width:250px;border-radius:6px;">
+   </div><br>
+  <div class="form-group mb=3">
+     <button type="Submit" name="save_datetime" class="btn btn-primary">Submit</button>
+  </div><br><br>
+</form>
+</body>
+</html>

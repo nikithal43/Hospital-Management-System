@@ -1,0 +1,48 @@
+Appointment_DT
+session_start();
+$con = mysqli_connect("localhost","hms","test1234","hospital_management");
+
+if(isset($_POST['save_datetime']))
+{
+   $name = $_POST['name'];
+   $Appointment_DT = $_POST['Appointment_DT'];
+   
+   $query = "INSERT INTO appointment(name,Appointment_DT) values ('$name','$Appointment_DT');
+   $query_run = mysqli_query($con,$query);
+   
+   if($query_run)
+   {
+       $_SESSION['status'] = "Appointment Booked Successfully";
+       header("Location: index.html);
+   }
+   else
+   {
+       $_SESSION['status'] = "Sorry Appointment Not Booked";
+       header("Location: index.html);
+   }
+
+}
+
+    //Database connection here
+    $con = new mysqli("localhost","hms","test1234","hospital_management");
+    if($con->connect_error){
+         die("Failed to connect:".$con->connect_error);
+    } else {
+          $stmt = $con->prepare("select * from appointment where Patient_ID = ?");
+          $stmt = $con->prepare("select * from appointment where Doctor_ID = ?");
+          $stmt->bind_param("i",$Patient_ID);
+          $stmt->bind_param("i",$Doctor_ID);
+          $stmt->execute();
+          $stmt_result = $stmt->get_result();
+          if($stmt_result->num_rows > 0) {
+              $data = $stmt_result->fetch_assoc();
+              if ($data['Patient_ID'] === $Patient_ID || $data['Doctor_ID'] === $Doctor_ID ) {
+                   echo "<h2>Appointment Booked Successfully</h2>";
+              } else {
+                 echo "<h2>Invalid Patient_ID or Password</h2>";
+             }
+          } else {
+              echo "<h2>Invalid Patient_ID or Password</h2>";
+           }
+     }
+?>
